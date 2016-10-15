@@ -54,6 +54,9 @@ No major challenges while building this app. :]
 
 - [Android Async HTTP](https://github.com/loopj/android-async-http) - Simple asynchronous HTTP requests with JSON parsing
 - [Picasso](http://square.github.io/picasso/) - Image loading and caching library for Android
+- [EasyFonts] (https://github.com/vsvankhede/EasyFonts) - Useful library to use custom fonts in your android app
+- [Picasso Transformations] (https://github.com/wasabeef/picasso-transformations) - An Android transformation library providing a variety of image transformations for Picasso 
+- [Android GPU Image] (https://github.com/CyberAgent/android-gpuimage) - Android filters based on OpenGL  
 
 ## License
 
