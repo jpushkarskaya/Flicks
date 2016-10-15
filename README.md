@@ -10,9 +10,9 @@ The following **required** functionality is completed:
 
 * [X] User can **scroll through current movies** from the Movie Database API
 * [X] Layout is optimized with the [ViewHolder](http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView#improving-performance-with-the-viewholder-pattern) pattern.
-* [ ] For each movie displayed, user can see the following details:
+* [X] For each movie displayed, user can see the following details:
   * [X] Title, Poster Image, Overview (Portrait mode)
-  * [ ] Title, Backdrop Image, Overview (Landscape mode)
+  * [X] Title, Backdrop Image, Overview (Landscape mode)
 
 The following **optional** features are implemented:
 
@@ -34,7 +34,6 @@ The following **bonus** features are implemented:
 
 The following **additional** features are implemented:
 
-* [X] Add some fun on-click image transformations (swirl)
 * [ ] Include a splash screen on app start-up
 * [X] Use third-party fonts to _prettify_ the UI
 
