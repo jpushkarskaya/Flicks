@@ -8,10 +8,10 @@ Time spent: **X** hours spent in total
 
 The following **required** functionality is completed:
 
-* [x] User can **scroll through current movies** from the Movie Database API
-* [x] Layout is optimized with the [ViewHolder](http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView#improving-performance-with-the-viewholder-pattern) pattern.
+* [X] User can **scroll through current movies** from the Movie Database API
+* [X] Layout is optimized with the [ViewHolder](http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView#improving-performance-with-the-viewholder-pattern) pattern.
 * [ ] For each movie displayed, user can see the following details:
-  * [x] Title, Poster Image, Overview (Portrait mode)
+  * [X] Title, Poster Image, Overview (Portrait mode)
   * [ ] Title, Backdrop Image, Overview (Landscape mode)
 
 The following **optional** features are implemented:
@@ -29,13 +29,14 @@ The following **bonus** features are implemented:
     * [ ] More popular movies should start a separate activity that plays the video immediately.
     * [ ] Less popular videos rely on the detail page should show ratings and a YouTube preview.
 * [ ] Apply the popular [Butterknife annotation library](http://guides.codepath.com/android/Reducing-View-Boilerplate-with-Butterknife) to reduce boilerplate code.
-* [x] Apply rounded corners for the poster or background images using [Picasso transformations](https://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library#other-transformations)
+* [X] Apply rounded corners for the poster or background images using [Picasso transformations](https://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library#other-transformations)
 * [ ] Replaced android-async-http network client with the popular [OkHttp](http://guides.codepath.com/android/Using-OkHttp) or [Volley](http://guides.codepath.com/android/Networking-with-the-Volley-Library) networking libraries.
 
 The following **additional** features are implemented:
 
-* [x] Add some fun on-click image transformations (swirl)
+* [X] Add some fun on-click image transformations (swirl)
 * [ ] Include a splash screen on app start-up
+* [X] Use third-party fonts to _prettify_ the UI
 
 ## Video Walkthrough
 
