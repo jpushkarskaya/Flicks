@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/list_vertical_margin"
+    android:paddingTop="@dimen/list_vertical_margin"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageButton
+        android:id="@+id/btnDetails"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:onClick="onDetailsClick"
+        android:src="@drawable/movie_details"
+        android:background="@null"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <ImageView
+        android:id="@+id/imgPoster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@mipmap/ic_launcher"
+        android:layout_toRightOf="@id/btnDetails"
+        android:layout_toEndOf="@id/btnDetails"
+        android:layout_alignParentTop="true"
+        />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        tools:text="Deepwater Horizon"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imgPoster"
+        android:layout_toEndOf="@+id/imgPoster"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="4dp"
+        />
+
+    <TextView
+        android:id="@+id/tvOverview"
+        tools:text="A story set on the offshore drilling rig Deepwater Horizon, which exploded during April 2010 and created the worst oil spill in U.S. history."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_toRightOf="@+id/imgPoster"
+        android:layout_toEndOf="@+id/imgPoster"
+        android:layout_alignLeft="@id/tvTitle"
+        android:layout_alignStart="@id/tvTitle"
+        android:textColor="@color/colorPrimaryLight"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="4dp"
+        />
+
+
+</RelativeLayout>
