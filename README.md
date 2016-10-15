@@ -17,7 +17,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [ ] User can **pull-to-refresh** popular stream to get the latest movies.
-* [ ] Display a nice default [placeholder graphic](http://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library#configuring-picasso) for each image during loading.
+* [x] Display a nice default [placeholder graphic](http://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library#configuring-picasso) for each image during loading.
 * [x] Improved the user interface through styling and coloring.
 
 The following **bonus** features are implemented:
@@ -34,7 +34,8 @@ The following **bonus** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [x] Add some fun on-click image transformations (swirl)
+* [ ] Include a splash screen on app start-up
 
 ## Video Walkthrough
 
@@ -42,11 +43,11 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with [RecordIt](http://recordit.co/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+No major challenges while building this app. :]
 
 ## Open-source libraries used
 
