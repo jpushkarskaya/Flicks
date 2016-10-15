@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.jpushkarskaya.flicks.MovieActivity"
-    android:background="@color/colorAccentDark">
+    android:background="@color/colorAccent">
 
     <TextView
         android:id="@+id/tvHeader"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="@string/header"
         android:gravity="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="28dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:background="@color/black"
@@ -24,7 +24,7 @@
         android:id="@+id/tvLine"
         android:layout_below="@id/tvHeader"
         android:layout_width="match_parent"
-        android:layout_height="5dp"
+        android:layout_height="1dp"
         android:background="@color/black"/>
 
     <ListView

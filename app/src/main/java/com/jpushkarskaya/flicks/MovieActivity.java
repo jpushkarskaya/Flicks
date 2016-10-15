@@ -44,7 +44,7 @@ public class MovieActivity extends AppCompatActivity {
 
     public void setupFonts() {
         TextView tvHeader = (TextView) findViewById(R.id.tvHeader);
-        tvHeader.setTypeface(EasyFonts.walkwayObliqueSemiBold(this));
+        tvHeader.setTypeface(EasyFonts.walkwayBold(this));
     }
 
     public void populateMovies() {

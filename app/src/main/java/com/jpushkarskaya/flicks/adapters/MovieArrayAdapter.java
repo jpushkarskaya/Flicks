@@ -2,6 +2,7 @@ package com.jpushkarskaya.flicks.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -11,8 +12,12 @@ import android.widget.TextView;
 import com.jpushkarskaya.flicks.R;
 import com.jpushkarskaya.flicks.models.Movie;
 import com.squareup.picasso.Picasso;
+import com.vstechlab.easyfonts.EasyFonts;
 
 import java.util.List;
+
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
+import jp.wasabeef.picasso.transformations.gpu.SwirlFilterTransformation;
 
 /**
  * Created by epushkarskaya on 10/15/16.
@@ -27,7 +32,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // get data for position
-        Movie movie = getItem(position);
+        final Movie movie = getItem(position);
         MovieHolder movieHolder;
 
         // check to see if reusing view
@@ -40,11 +45,33 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         movieHolder = (MovieHolder) convertView.getTag();
         movieHolder.title.setText(movie.getTitle());
         movieHolder.overview.setText(movie.getOverview());
-        Picasso.with(getContext()).load(movie.getPosterPath()).into(movieHolder.poster);
+
+        // load poster image
+       Picasso.with(getContext()).load(movie.getPosterPath())
+                .transform(new RoundedCornersTransformation(5, 5))
+                .placeholder(R.drawable.default_movie)
+                .into(movieHolder.poster);
+
+
+
+        final ImageView changingPoster = movieHolder.poster;
+
+        movieHolder.poster.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Picasso.with(getContext()).load(movie.getPosterPath())
+                        .transform(new RoundedCornersTransformation(5, 5))
+                        .placeholder(changingPoster.getDrawable())
+                        .transform(new SwirlFilterTransformation(getContext()))
+                        .into(changingPoster);
+                return true;
+            }
+
+        });
 
         return convertView;
     }
-
 
     private class MovieHolder {
 
@@ -54,6 +81,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
 
         public MovieHolder(View view) {
             title = (TextView) view.findViewById(R.id.tvTitle);
+            title.setTypeface(EasyFonts.walkwayBold(getContext()));
             overview = (TextView) view.findViewById(R.id.tvOverview);
             poster = (ImageView) view.findViewById(R.id.imgPoster);
         }

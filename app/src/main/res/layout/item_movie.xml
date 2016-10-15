@@ -6,11 +6,11 @@
     android:layout_height="wrap_content"
     android:paddingBottom="@dimen/list_vertical_margin"
     android:paddingTop="@dimen/list_vertical_margin"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/black">
 
     <ImageButton
         android:id="@+id/btnDetails"
-        android:layout_width="20dp"
+        android:layout_width="24dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
@@ -24,8 +24,9 @@
 
     <ImageView
         android:id="@+id/imgPoster"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="260dp"
+        android:adjustViewBounds="true"
         tools:src="@mipmap/ic_launcher"
         android:layout_toRightOf="@id/btnDetails"
         android:layout_toEndOf="@id/btnDetails"
@@ -35,13 +36,15 @@
     <TextView
         android:id="@+id/tvTitle"
         tools:text="Deepwater Horizon"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="22dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/imgPoster"
         android:layout_toEndOf="@+id/imgPoster"
-        android:textColor="@color/white"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignTop="@id/imgPoster"
+        android:fontFamily="sans-serif"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginRight="4dp"
@@ -59,6 +62,7 @@
         android:layout_alignLeft="@id/tvTitle"
         android:layout_alignStart="@id/tvTitle"
         android:textColor="@color/colorPrimaryLight"
+        android:textSize="12dp"
         android:layout_marginRight="4dp"
         android:layout_marginEnd="4dp"
         />
