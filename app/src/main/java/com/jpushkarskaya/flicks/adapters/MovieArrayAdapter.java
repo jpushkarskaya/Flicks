@@ -1,8 +1,8 @@
 package com.jpushkarskaya.flicks.adapters;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -17,7 +17,6 @@ import com.vstechlab.easyfonts.EasyFonts;
 import java.util.List;
 
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
-import jp.wasabeef.picasso.transformations.gpu.SwirlFilterTransformation;
 
 /**
  * Created by epushkarskaya on 10/15/16.
@@ -46,29 +45,24 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         movieHolder.title.setText(movie.getTitle());
         movieHolder.overview.setText(movie.getOverview());
 
+        String imgPath;
+        int placeholder;
+        int orientation = getContext().getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            imgPath = movie.getPosterPath();
+            placeholder = R.drawable.default_movie;
+        } else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            imgPath = movie.getBackdropPath();
+            placeholder = R.drawable.default_movie_land;
+        } else {
+            throw new RuntimeException("Orientation " + orientation + " is invalid.");
+        }
+
         // load poster image
-       Picasso.with(getContext()).load(movie.getPosterPath())
+       Picasso.with(getContext()).load(imgPath)
                 .transform(new RoundedCornersTransformation(5, 5))
-                .placeholder(R.drawable.default_movie)
+                .placeholder(placeholder)
                 .into(movieHolder.poster);
-
-
-
-        final ImageView changingPoster = movieHolder.poster;
-
-        movieHolder.poster.setOnTouchListener(new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Picasso.with(getContext()).load(movie.getPosterPath())
-                        .transform(new RoundedCornersTransformation(5, 5))
-                        .placeholder(changingPoster.getDrawable())
-                        .transform(new SwirlFilterTransformation(getContext()))
-                        .into(changingPoster);
-                return true;
-            }
-
-        });
 
         return convertView;
     }

@@ -24,13 +24,21 @@
         android:id="@+id/tvLine"
         android:layout_below="@id/tvHeader"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="4dp"
         android:background="@color/black"/>
 
-    <ListView
-        android:id="@+id/lvMovies"
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/tvLine"/>
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lvMovies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvLine"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

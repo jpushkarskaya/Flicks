@@ -12,8 +12,6 @@ import java.util.ArrayList;
 
 public class Movie {
 
-    private final String BASE_PATH = "https://image.tmdb.org/t/p/w342";
-
     private String title;
     private String overview;
     private String posterPath;
@@ -51,11 +49,11 @@ public class Movie {
     }
 
     public String getPosterPath() {
-        return String.format("%s%s", BASE_PATH, posterPath);
+        return String.format("https://image.tmdb.org/t/p/w342%s", posterPath);
     }
 
     public String getBackdropPath() {
-        return backdropPath == null ? null : String.format("%s%s", BASE_PATH, backdropPath);
+        return backdropPath == null ? null : String.format("https://image.tmdb.org/t/p/w780%s", backdropPath);
     }
 
     public int getPopularity() {

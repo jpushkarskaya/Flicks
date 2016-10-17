@@ -1,6 +1,7 @@
 package com.jpushkarskaya.flicks;
 
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +24,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class MovieActivity extends AppCompatActivity {
 
+    SwipeRefreshLayout swipeContainer;
     ArrayList<Movie> movies;
     MovieArrayAdapter movieAdapter;
     ListView lvMovies;
@@ -32,19 +34,36 @@ public class MovieActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie);
 
-        setupFonts();
-
+        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
         lvMovies = (ListView) findViewById(R.id.lvMovies);
         movies = new ArrayList<>();
         movieAdapter = new MovieArrayAdapter(this, movies);
         lvMovies.setAdapter(movieAdapter);
 
+        setupFonts();
+        setUpRefresh();
         populateMovies();
     }
 
     public void setupFonts() {
         TextView tvHeader = (TextView) findViewById(R.id.tvHeader);
         tvHeader.setTypeface(EasyFonts.walkwayBold(this));
+    }
+
+    public void setUpRefresh() {
+
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+
+            @Override
+            public void onRefresh() {
+                populateMovies();
+                swipeContainer.setColorSchemeResources(R.color.colorAccent,
+                        R.color.colorAccentLight, R.color.colorPrimaryLight,
+                        R.color.colorPrimary);
+            }
+
+
+        });
     }
 
     public void populateMovies() {
