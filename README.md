@@ -2,7 +2,7 @@
 
 **Flicks** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
-Time spent: **X** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 
 The following **bonus** features are implemented:
 
-* [ ] Allow user to view details of the movie including ratings and popularity within a separate activity or dialog fragment.
+* [X] Allow user to view details of the movie including ratings and popularity within a separate activity or dialog fragment.
 * [ ] When viewing a popular movie (i.e. a movie voted for more than 5 stars) the video should show the full backdrop image as the layout.  Uses [Heterogenous ListViews](http://guides.codepath.com/android/Implementing-a-Heterogenous-ListView) or [Heterogenous RecyclerView](http://guides.codepath.com/android/Heterogenous-Layouts-inside-RecyclerView) to show different layouts.
 * [ ] Allow video trailers to be played in full-screen using the YouTubePlayerView.
     * [ ] Overlay a play icon for videos that can be played.
@@ -34,14 +34,14 @@ The following **bonus** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] Include a splash screen on app start-up
+* [X] Include a splash screen on app start-up
 * [X] Use third-party fonts to _prettify_ the UI
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/3H9JVatNmh.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [RecordIt](http://recordit.co/).
 
@@ -54,8 +54,6 @@ No major challenges while building this app. :]
 - [Android Async HTTP](https://github.com/loopj/android-async-http) - Simple asynchronous HTTP requests with JSON parsing
 - [Picasso](http://square.github.io/picasso/) - Image loading and caching library for Android
 - [EasyFonts] (https://github.com/vsvankhede/EasyFonts) - Useful library to use custom fonts in your android app
-- [Picasso Transformations] (https://github.com/wasabeef/picasso-transformations) - An Android transformation library providing a variety of image transformations for Picasso 
-- [Android GPU Image] (https://github.com/CyberAgent/android-gpuimage) - Android filters based on OpenGL  
 
 ## License
 
