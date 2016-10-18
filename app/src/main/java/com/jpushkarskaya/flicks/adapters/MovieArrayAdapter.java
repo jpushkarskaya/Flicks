@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,7 +32,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // get data for position
-        final Movie movie = getItem(position);
+        Movie movie = getItem(position);
         MovieHolder movieHolder;
 
         // check to see if reusing view
@@ -44,6 +45,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         movieHolder = (MovieHolder) convertView.getTag();
         movieHolder.title.setText(movie.getTitle());
         movieHolder.overview.setText(movie.getOverview());
+        movieHolder.btnDetails.setTag(movie);
 
         String imgPath;
         int placeholder;
@@ -67,17 +69,19 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         return convertView;
     }
 
-    private class MovieHolder {
+    public class MovieHolder {
 
-        TextView title;
-        TextView overview;
-        ImageView poster;
+        public TextView title;
+        public TextView overview;
+        public ImageView poster;
+        public ImageButton btnDetails;
 
         public MovieHolder(View view) {
-            title = (TextView) view.findViewById(R.id.tvTitle);
-            title.setTypeface(EasyFonts.walkwayBold(getContext()));
-            overview = (TextView) view.findViewById(R.id.tvOverview);
-            poster = (ImageView) view.findViewById(R.id.imgPoster);
+            this.title = (TextView) view.findViewById(R.id.tvTitle);
+            this.title.setTypeface(EasyFonts.walkwayBold(getContext()));
+            this.overview = (TextView) view.findViewById(R.id.tvOverview);
+            this.poster = (ImageView) view.findViewById(R.id.imgPoster);
+            this.btnDetails =  (ImageButton) view.findViewById(R.id.btnDetails);
         }
 
     }

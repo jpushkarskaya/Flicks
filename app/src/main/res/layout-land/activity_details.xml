@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@color/black"
+    tools:context="com.jpushkarskaya.flicks.DetailsActivity">
+
+    <TextView
+        android:id="@+id/tvMovieTitle"
+        tools:text="The Girl on the Train"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"/>
+
+    <ImageView
+        android:id="@+id/imgBackdrop"
+        tools:src="@mipmap/flicks_icon"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMovieTitle"
+        android:layout_marginTop="2dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:id="@+id/tvOverview"
+        tools:text="A story set on the offshore drilling rig Deepwater Horizon, which exploded during April 2010 and created the worst oil spill in U.S. history."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgBackdrop"
+        android:layout_below="@id/tvMovieTitle"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="12sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/ratingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgBackdrop"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tvRatingLabel"
+            android:text="@string/rating_label"
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/tvRating"
+            tools:text="5"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:textColor="@color/colorPrimaryLight"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/releaseDateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratingLayout"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/tvReleaseDateLabel"
+            android:text="@string/release_date_label"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/tvReleaseDate"
+            tools:text="September 2015"
+            android:layout_width="wrap_content"
+            android:paddingLeft="4dp"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryLight"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorAccentLight"
+        android:text="@string/back"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onExit"/>
+
+
+</RelativeLayout>

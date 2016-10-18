@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Flicks</string>
     <string name="header">Current Flicks</string>
+    <string name="back">Back to Flicks</string>
+    <string name="rating_label">Rating: </string>
+    <string name="release_date_label">Release Date: </string>
+    <string name="original_language_label">Original Language: </string>
+    <string name="creator"> -- Created By Jenny Pushkarskaya -- </string>
 </resources>

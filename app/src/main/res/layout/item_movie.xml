@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:paddingBottom="@dimen/list_vertical_margin"
     android:paddingTop="@dimen/list_vertical_margin"
-    android:background="@color/white">
+    android:background="@color/black">
 
     <ImageButton
         android:id="@+id/btnDetails"
@@ -66,6 +66,5 @@
         android:layout_marginRight="4dp"
         android:layout_marginEnd="4dp"
         />
-
 
 </RelativeLayout>

@@ -16,14 +16,16 @@ public class Movie {
     private String overview;
     private String posterPath;
     private String backdropPath;
-    private int popularity;
+    private String popularity;
+    private String releaseDate;
 
     public Movie(JSONObject object) throws JSONException {
         this.posterPath = object.getString("poster_path");
         this.backdropPath = object.getString("backdrop_path");
-        this.title = object.getString("original_title");
+        this.title = object.getString("title");
         this.overview = object.getString("overview");
-        this.popularity = object.getInt("popularity");
+        this.popularity = object.getString("popularity");
+        this.releaseDate = object.getString("release_date");
     }
 
     public static ArrayList<Movie> fromJsonArray(JSONArray array) {
@@ -56,8 +58,12 @@ public class Movie {
         return backdropPath == null ? null : String.format("https://image.tmdb.org/t/p/w780%s", backdropPath);
     }
 
-    public int getPopularity() {
+    public String getPopularity() {
         return popularity;
+    }
+
+    public String getReleaseDate() {
+        return releaseDate;
     }
 
 }
